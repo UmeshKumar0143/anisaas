@@ -1,3 +1,3 @@
 export default function Faq(){
-    return <div>FAQ</div>
+    return <div className="text-white">helo</div>
 }
