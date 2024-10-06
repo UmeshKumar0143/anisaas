@@ -1,5 +1,5 @@
 export default function GetAcess(){
-    return <div className="bg-black py-[72px]">
+    return <div className="bg-black -mt-2 py-[72px]">
             <div className="container  text-white">
                 <div className="">
                 <h1 className="text-center font-bold text-5xl ">Get Instant access</h1>
@@ -9,7 +9,7 @@ export default function GetAcess(){
                 </div>
                 <div className="flex justify-center">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center mt-9">
-                    <input type="text" placeholder="your@email.com" className="py-3 px-3 rounded-lg w-80 pr-9 bg-zinc-700" />
+                    <input type="text" placeholder="your@email.com" className="py-3 px-3 border-none outline-none rounded-lg w-80 pr-9 bg-zinc-700" />
                     <button className="py-3 px-3 rounded-lg w-80 sm:w-32 flex justify-center items-center pr-9 text-black font-bold  bg-white">Get access</button>
                 </div>
                 </div>
