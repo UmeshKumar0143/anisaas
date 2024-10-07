@@ -20,13 +20,10 @@ const ImgArr = [
 
 
 export default function Logo(){
-    return <div className="bg-black py-[72px] ">
-        <div className='container'>
-        <div className="  text-center ">
-                <h1 className="text-2xl text-white text-opacity-70">Trusted by the world's most innovative teams </h1>
-        </div>
-        <div className='flex justify-center'>
-        <div className="overflow-hidden flex  relative mt-9 before:content-[''] after:content-[''] before:absolute before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:top-0 before:w-20 before:h-full after:absolute after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:top-0 after:right-0 after:w-5 after:h-full ">
+    return <div className="bg-black py-[72px]  ">
+        <div className='container flex  flex-col  justify-center max-w-7xl '>
+                <h1 className=" text-center text-2xl text-white text-opacity-70">Trusted by the world's most innovative teams </h1>
+        <div className="overflow-hidden flex    relative mt-9 before:content-[''] after:content-[''] before:absolute before:bg-[linear-gradient(to_right,#000,rgb(0,0,0,0))] before:top-0 before:w-20 before:h-full after:absolute after:bg-[linear-gradient(to_left,#000,rgb(0,0,0,0))] after:top-0 after:right-0 after:w-5 after:h-full ">
         <motion.div 
         transition={{
             duration: 10,
@@ -43,7 +40,6 @@ export default function Logo(){
                 <Image src = {item.src} className='h-8 flex-none w-auto' alt={item.alt}></Image>
             )}
         </motion.div>
-            </div>
             </div>
         </div>
         </div>
