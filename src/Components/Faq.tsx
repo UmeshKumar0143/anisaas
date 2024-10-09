@@ -2,7 +2,9 @@
 
 import { useState } from 'react';
 import PlusIcon  from '../assets/icons/plus.svg'
+import MinusIcom from '../assets/icons/minus.svg'
 import React from 'react';
+import {motion,AnimatePresence  } from 'framer-motion'
 const QuestionArr = [
     {Question : "What payments methods  do you accept ?",answer:"We accept all major cards , Paypal and various other payment methods dependig on you location. Please contact our support team for more information on accepted payment methods  in you region. "},
     {Question : "How does the pricing work for teams ? ",answer:"Our pricing is per user , per month. This means you only pay for the number of team members you have on your team. Discounts are avialable for larger teams and annual subscriptions "},
@@ -17,12 +19,19 @@ const ToogleAns = ({questions, answer ,index}: {questions : string; answer: stri
         <div key={index} className=" ">
         <div className='text-white flex items-center gap-3 '>
             <span className='text-lg flex-1'>{questions}</span>
-            <button onClick={()=>setisOpen(!isOpen)}><PlusIcon className = "text-2xl" /></button>
+            <button onClick={()=>setisOpen(!isOpen)}>{isOpen?<MinusIcom className = "text-2xl"/>:<PlusIcon className = "text-2xl" />}</button>
             </div>
      </div>
-    <div className={`text-lg py-3 ${!isOpen? 'hidden':''} text-white`}>
+     <AnimatePresence>
+       {isOpen &&  
+    <motion.div
+    initial= {{opacity: 0,height :0 ,marginTop: 0}} 
+    animate= {{opacity: 1, height: "auto",marginTop: "16px"}}
+    exit={{opacity: 0, height: 0,marginTop: 0}}
+    className={`text-lg mt-4 ${!isOpen? 'hidden':''} text-white`}>
         <span>{answer}</span>
-        </div>
+        </motion.div>}
+    </AnimatePresence>
                                         
     </>
 }
