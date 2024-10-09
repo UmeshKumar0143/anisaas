@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 import EcosystemSvg from '../assets/icons/ecosystem.svg'
 import {motion, useMotionTemplate, useMotionValue} from 'framer-motion'
 
-export default function Feature({title, desc,index}:{title: string, desc: string,index:number}) {
+export default function   Feature({title, desc,index}:{title: string, desc: string,index:number}) {
   const offsetX = useMotionValue(-100);
   const offsetY = useMotionValue(-100);
   const maskedImage = useMotionTemplate `radial-gradient(100px 100px at ${offsetX}px ${offsetY}px ,black , transparent)`;
