@@ -1,9 +1,7 @@
 "use client"
-import { title } from 'process'
 import Feature from './Feature'
-import {motion,progress,useScroll, useTransform} from 'framer-motion'
+import {motion,useScroll, useTransform} from 'framer-motion'
 import { useRef,useEffect } from 'react'
-import { div } from 'framer-motion/client'
 
 const FeaturesArr = [
     {title : "Integration Ecosystem",desc: "Enhance your productivity by connecting with your tools, keeping your essentials in one place."},
@@ -32,7 +30,7 @@ export default function Features(){
                 </div>
                 <div className='mt-16 sm:flex  gap-6'>
                     {FeaturesArr.map((item,index)=>
-                        <Feature title={item.title} desc={item.desc} index = {index} />
+                        <Feature key={index} title={item.title} desc={item.desc} index = {index} />
                     )}
                 </div>
 
