@@ -1,12 +1,17 @@
+"use client"
 import Helix from '../assets/images/helix2.png'
 import EmojiStar from '../assets/images/emojistar.png'
 import Image from 'next/image'
-
+import {motion } from 'framer-motion'
 export default function GetAcess(){
     return <div className="bg-black -mt-2 py-[72px] sm:py-[96px]">
             <div className="container relative max-w-xl   text-white">
-               <Image className='absolute hidden sm:inline   top-6 left-[calc(100%)]  ' src={Helix} alt="HlixImg"></Image>
-              <Image className='absolute  hidden sm:inline  -top-[120px] right-[calc(100%)]  ' src={EmojiStar} alt = "Emoji" ></Image>
+                <motion.div drag dragSnapToOrigin>
+               <Image draggable = 'false'  className='absolute hidden sm:inline   top-6 left-[calc(100%)]  ' src={Helix} alt="HlixImg"></Image>
+               </motion.div>
+               <motion.div drag dragSnapToOrigin>
+              <Image  draggable = 'false'  className='absolute  hidden sm:inline  -top-[120px] right-[calc(100%)]  ' src={EmojiStar} alt = "Emoji" ></Image>
+              </motion.div>
                 <h1 className="text-center font-bold text-5xl ">Get Instant access</h1>
                 <div className="flex justify-center">
                 <p className="text-center mt-6 text-xl sm:max-w-[576px] text-white/70">Celebrate the joy of accomplishment with an app designed to track your progress and motivate your efforts.</p>
