@@ -1,4 +1,4 @@
-
+import '../styles/globals.css'; 
 import Banner from "@/Components/Banner";
 import Faq from "@/Components/Faq";
 import Features from "@/Components/Features";
