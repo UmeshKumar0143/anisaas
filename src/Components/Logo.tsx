@@ -33,11 +33,11 @@ export default function Logo(){
         initial = {{translateX: 0}}
         animate = {{translateX: "-50%"}}
         className='flex gap-16 pr-16 flex-none  '>
-            {ImgArr.map(item=>
-                <Image src = {item.src} className='h-8 flex-none w-auto' alt={item.alt}></Image>
+            {ImgArr.map((item,index)=>
+                <Image key={index} src = {item.src} className='h-8 flex-none w-auto' alt={item.alt}></Image>
             )}
             {ImgArr.map(item=>
-                <Image src = {item.src} className='h-8 flex-none w-auto' alt={item.alt}></Image>
+                <Image key={index} src = {item.src} className='h-8 flex-none w-auto' alt={item.alt}></Image>
             )}
         </motion.div>
             </div>

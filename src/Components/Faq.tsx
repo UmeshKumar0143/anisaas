@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from 'react';
 import PlusIcon  from '../assets/icons/plus.svg'
 import MinusIcom from '../assets/icons/minus.svg'
 import React from 'react';
@@ -44,7 +43,7 @@ export default function Faq(){
                         </div>
                         <div className="mt-9">
                             {QuestionArr.map((item,index)=>
-                            <div className='border-b-[1px] py-7'>
+                            <div key={index} className='border-b-[1px] py-7'>
                                 <ToogleAns questions={item.Question} answer={item.answer} index = {index}/>
                                 </div>
                             )}
