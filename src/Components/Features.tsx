@@ -1,7 +1,7 @@
 "use client"
 import Feature from './Feature'
 import {motion,useScroll, useTransform} from 'framer-motion'
-import { useRef,useEffect } from 'react'
+import { useRef } from 'react'
 
 const FeaturesArr = [
     {title : "Integration Ecosystem",desc: "Enhance your productivity by connecting with your tools, keeping your essentials in one place."},
