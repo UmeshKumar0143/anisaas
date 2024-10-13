@@ -1,5 +1,5 @@
 import "./globals.css";
-
+import { Analytics } from "@vercel/analytics/react"
 import Banner from "@/Components/Banner";
 import Faq from "@/Components/Faq";
 import Features from "@/Components/Features";
@@ -12,6 +12,7 @@ import Product from "@/Components/Products";
 export default function Home() {
   return (
     <div className="overflow-hidden">
+      <Analytics/>
       <Banner/>
       <Navbar/>
       <Hero/>
